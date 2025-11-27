@@ -1,0 +1,74 @@
+/* 全局重置 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: #f5f5f5; /* 微信灰背景 */
+    font-family: sans-serif;
+    padding-top: 50px;    /* 给顶部栏留位置 */
+    padding-bottom: 60px; /* 给底部栏留位置 */
+}
+
+/* 顶部标题栏 */
+.top-bar {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    height: 50px;
+    background-color: #ededed;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: bold;
+    border-bottom: 1px solid #dcdcdc;
+    z-index: 100;
+}
+
+/* 底部导航栏 */
+.bottom-nav {
+    position: fixed;
+    bottom: 0; left: 0; width: 100%;
+    height: 60px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-around; /* 两个按钮平均分布 */
+    align-items: center;
+}
+.nav-item {
+    display: flex; flex-direction: column; align-items: center;
+    color: #999;
+    cursor: pointer;
+}
+.nav-item.active { color: #07c160; /* 微信绿 */ }
+.icon { font-size: 24px; margin-bottom: 2px; }
+
+/* 页面内容 */
+.page { padding: 10px; }
+
+/* 聊天气泡样式 */
+.msg {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    max-width: 80%;
+    width: fit-content; /* 内容多少宽度就多少 */
+}
+.msg.left { background-color: white; float: left; clear: both; }
+.msg.right { background-color: #95ec69; float: right; clear: both; }
+
+/* 朋友圈样式 */
+.post {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.post h3 { color: #576b95; font-size: 16px; margin-bottom: 5px; }
+
+/* 聊天输入框区域 */
+.input-area {
+    position: fixed;
+    bottom: 60px; /* 在导航栏上面 */
+    left: 0; width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    display: flex;
+}
+#msgInput { flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 4px;}
+#sendBtn { margin-left: 10px; padding: 0 15px; background: #07c160; color: white; border: none; border-radius: 4px;}
