@@ -49,30 +49,36 @@ function switchTab(tabName) {
     const chatPage = document.getElementById('chat-page');
     const momentsPage = document.getElementById('moments-page');
     const contactsPage = document.getElementById('contacts-page');
+    const mePage = document.getElementById('me-page'); // ✨ 新增
     const navItems = document.querySelectorAll('.nav-item');
 
-    // 1. 隐藏所有页面
+    // 1. 全部隐藏
     chatPage.style.display = 'none';
     momentsPage.style.display = 'none';
     contactsPage.style.display = 'none';
+    mePage.style.display = 'none'; // ✨ 新增
     
-    // 2. 取消所有按钮高亮
+    // 2. 取消高亮
     navItems.forEach(item => item.classList.remove('active'));
 
-    // 3. 根据名字显示对应页面
+    // 3. 判断显示
     if (tabName === 'chat') {
         chatPage.style.display = 'block';
         navItems[0].classList.add('active');
-        // 进聊天页时，刷新一下消息
         loadMessages();
     } else if (tabName === 'contacts') {
         contactsPage.style.display = 'block';
         navItems[1].classList.add('active');
-        // 进通讯录时，刷新好友列表
         loadFriends();
-    } else {
+    } else if (tabName === 'moments') {
         momentsPage.style.display = 'block';
         navItems[2].classList.add('active');
+    } else {
+        // ✨ 新增：个人中心
+        mePage.style.display = 'block';
+        navItems[3].classList.add('active');
+        // 显示当前名字
+        document.getElementById('currentNameDisplay').innerText = myName;
     }
 }
 
