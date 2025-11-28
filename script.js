@@ -1,8 +1,8 @@
 // --- 配置 ---
-// const API_URL = 'http://localhost:3000/api/messages'; // ❌ 这是本地的，删掉
+// const API_URL = 'http://localhost:3000/api/messages'; // ❌ 删掉旧的本地地址
 
-// ✅ 换成刚才 Render 给你的那个网址
-const API_URL = 'https://my-chat-server-abcd.onrender.com/api/messages';
+// ✅ 换成新的云端地址 (注意后面要加 /api/messages)
+const API_URL = 'https://my-chat-server-gzfi.onrender.com/api/messages';
 
 // 1. 发送消息的函数 (POST)
 const sendBtn = document.getElementById('sendBtn');
