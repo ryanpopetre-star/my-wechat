@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top-bar">我的微信</header>
+<header class="top-bar">微信</header>
 
 <div id="chat-page" class="page">
     <div class="message-list">
         <div class="msg left">你好！我是你的AI助手。</div>
-        <div class="msg right">你好，我想测试一下。</div>
     </div>
     <div class="input-area">
         <input type="text" id="msgInput" placeholder="发消息...">
@@ -27,10 +26,31 @@
         <p>今天天气真不错！☀️</p>
         <div class="like-section">❤️ <span>12</span></div>
     </div>
-    <div class="post">
-        <h3>李四</h3>
-        <p>正在学习 Git，感觉自己变强了！💪</p>
-        <div class="like-section">❤️ <span>8</span></div>
+</div>
+
+<div id="contacts-page" class="page" style="display: none;">
+    <div class="add-friend-box">
+        <input type="text" id="friendInput" placeholder="输入名字...">
+        <button id="addFriendBtn">添加好友</button>
+    </div>
+    <div class="contact-list">
+        </div>
+</div>
+
+<div id="me-page" class="page" style="display: none;">
+    <div class="profile-card">
+        <div class="avatar-large">👤</div>
+        <div class="profile-info">
+            <h3>当前名字：<span id="currentNameDisplay">加载中...</span></h3>
+            <p>微信号：wx_888888</p>
+        </div>
+    </div>
+    <div class="setting-box">
+        <h4>修改昵称</h4>
+        <div class="input-group">
+            <input type="text" id="newNameInput" placeholder="输入新名字...">
+            <button id="saveNameBtn">保存</button>
+        </div>
     </div>
 </div>
 
@@ -48,6 +68,8 @@
         <span class="icon">😊</span><span>我</span>
     </div>
 </nav>
+
+<script src="script.js"></script>
 
 <script src="script.js"></script>  
 </body>
